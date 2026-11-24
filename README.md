@@ -110,13 +110,13 @@ docker-compose up -d
 Готовый образ публикуется GitHub Actions в GHCR:
 
 ```bash
-docker pull ghcr.io/aist/max2tg:latest
+docker pull ghcr.io/ne4sp/max2tg:latest
 docker run -d \
   --name max2tg \
   --restart unless-stopped \
   --env-file .env \
   -v "$(pwd)/logs:/app/logs" \
-  ghcr.io/aist/max2tg:latest
+  ghcr.io/ne4sp/max2tg:latest
 ```
 
 Workflow публикует образ на push в `main` и при ручном запуске. Основные теги образа: `latest` и `sha-<commit>`.
@@ -397,13 +397,13 @@ docker-compose up -d
 The prebuilt image is published by GitHub Actions to GHCR:
 
 ```bash
-docker pull ghcr.io/aist/max2tg:latest
+docker pull ghcr.io/ne4sp/max2tg:latest
 docker run -d \
   --name max2tg \
   --restart unless-stopped \
   --env-file .env \
   -v "$(pwd)/logs:/app/logs" \
-  ghcr.io/aist/max2tg:latest
+  ghcr.io/ne4sp/max2tg:latest
 ```
 
 The workflow publishes the image on pushes to `main` and on manual runs. Main image tags are `latest` and `sha-<commit>`.
